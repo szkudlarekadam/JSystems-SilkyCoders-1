@@ -2,6 +2,8 @@
 
 > What are best terminals for Cloud Code, Gemini CLI, Cursor CLI or Codex CLI. I use Ghostty on Linux (also on MacOS), and iTerm on MacOS. Something similar for Windows?
 
+> [Recommendations from Claude Code](https://code.claude.com/docs/en/terminal-config)
+
 ## Quick Context: Ghostty on Windows
 
 Ghostty is **not available on Windows**  — it only supports Linux and macOS. So you'll need a genuine alternative. The closest in spirit (fast, Rust-based, GPU-accelerated, developer-focused) are WezTerm and Warp.[^1]
