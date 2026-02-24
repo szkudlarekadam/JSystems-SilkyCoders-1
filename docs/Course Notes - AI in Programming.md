@@ -122,6 +122,8 @@ Survey results: [Form - Tally](https://tally.so/forms/lbdPzv?tab=answers)
 	- Add context, docs for latest features
 	- Overfitting - LLM may still struggle, ignore context and follow old path
 - **Hallucinations** - RAG / Context / Browser helps to solve this issue, but not 100%
+  - [AA-Omniscience Index](https://artificialanalysis.ai/evaluations/omniscience) - Benchmark for Hallucination level: 
+  - [LogProbs parameter](https://developers.openai.com/cookbook/examples/using_logprobs/) (log probabilities of each output token)
 - **Context Window**
 	- Temporary "working memory" of LLM,
 	- Attention (uwaga, skupienie),
@@ -132,12 +134,19 @@ Survey results: [Form - Tally](https://tally.so/forms/lbdPzv?tab=answers)
 	- model predicts future values in a sequence by using a linear combination of its own past values
 	- one mistake may lead to cascade / domino effect of mistakes (better to start again - branching in ChatGPT, Cursor can)
 -  What LLM needs to support to use it as **AI Agent**???
-	- **Structured Output** / Json schema
+	- **Structured Output** / Json schema:
+  	- [OpenAI Structured Outputs Guide (JavaScript)](https://developers.openai.com/api/docs/guides/structured-outputs/?lang=javascript)
+   - [OpenAI Java SDK Examples (structured output at the end of the list)](https://github.com/openai/openai-java/tree/332e1a18b4a11469e528f0359c997ae2beecd04a/openai-java-example/src/main/java/com/openai/example)
+   - [Spring AI – OpenAI Structured Outputs](https://docs.spring.io/spring-ai/reference/api/chat/openai-chat.html#_structured_outputs)
 	- **Function Calling** / Tool usage
 - **RAG** - architecture / concept of augmenting context / input with real data
 	- Retrieval-Augmented Generation (creator regrets this name ;)
 	- Semantic search in vector space, Vector DB, Graph DB, Hybrid
 	- Reranking
+  	- [Vercel AI SDK – Reranking](https://ai-sdk.dev/docs/ai-sdk-core/reranking)
+	- Local Vector DBs:
+  	- [SQLite Vector Extension](https://www.sqlite.ai/sqlite-vector)
+    - [Chroma – Open-source Embedding Database](https://github.com/chroma-core/chroma)
 - **Cache** - cost optimization, caching calculated weights for same input tokens
 - **Reasoning**, Reinforced Learning & R1:
 	- [How was DeepSeek-R1 built; For dummies : r/LLMDevs](https://www.reddit.com/r/LLMDevs/comments/1ibhpqw/how_was_deepseekr1_built_for_dummies/)
@@ -152,6 +161,13 @@ Survey results: [Form - Tally](https://tally.so/forms/lbdPzv?tab=answers)
 		- Goose
 		- Claude Cowork: [Introducing Cowork | Claude](https://claude.com/blog/cowork-research-preview)
 	- Agentic workflows in the cloud, CI/CD, Repo
+- **Prompting**
+  - Polish language in prompting: [AI mówi po polsku – nasz język zdeklasował angielski w najnowszym rankingu (cryps.pl)](https://cryps.pl/sztuczna-inteligencja-mowi-po-polsku-nasz-jezyk-zdeklasowal-angielski-w-najnowszym-rankingu/)
+  - Context vs Prompt Engineering: [Effective Context Engineering for AI Agents – Anthropic](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)
+  - [Prompting Techniques](https://www.promptingguide.ai/techniques) data base
+  - My slides from other course: [Promting - Generative AI szkolenie – DevPowers (slajd 8)](https://devpowers.com/szkolenia/generative-ai-08-12-2025/#slide-8)
+  - Testowanie promptów: [Promptfoo – Open-source Prompt Testing](https://www.promptfoo.dev/)
+  - Smart Prompt generator: [Prompt Cowboy – AI Prompt Generator](https://www.promptcowboy.ai/)
 
 ## LLM benchmarks, best models
 
