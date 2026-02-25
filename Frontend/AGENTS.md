@@ -9,6 +9,45 @@
 
 ---
 
+## Frontend Implementation Rules
+
+- **Form fields**: order number, purchase date, intent (`return` / `complaint`), description, image upload; validate all fields with Zod schemas
+- **Chat UI**: use `assistant-ui` components and `useChat` from Vercel AI SDK; target `POST /api/chat`
+- **Image handling**: resize images to max 1024px on the client before upload
+- **Streaming**: consume the Vercel AI SDK Data Stream Protocol (`0:"text"` and `8:[{...}]` chunks) — do not parse raw JSON from SSE
+
+---
+
+## Coding Style & Naming Conventions
+
+- Use TypeScript for all frontend code; prefer interfaces over type aliases for object shapes
+- Avoid `any` — prefer strict typing throughout; import types from external packages when available
+- Functional components only — no class components
+- Component names: PascalCase; file names match component name (e.g., `ReturnForm.tsx`)
+- Avoid type assertions with `as` or `!` when possible
+- Use strict mode (`strict: true` in `tsconfig.json`)
+- Use Type Guards for runtime type narrowing at system boundaries
+- No inline styles — use Tailwind utility classes exclusively
+
+---
+
+## Build & Development Commands
+
+```bash
+# Run inside the Frontend/ directory
+npm run dev             # start Vite dev server (http://localhost:5173)
+npm run build           # tsc + vite build → outputs to dist/
+npm test                # run Vitest (single run)
+npm run test:watch      # run Vitest in watch mode
+npm run test:coverage   # run Vitest with coverage report
+npm run lint            # ESLint on src/
+npm run format          # Prettier write
+npm run format:check    # Prettier check (used in CI)
+npm run e2e             # Playwright end-to-end tests
+```
+
+---
+
 ## Frontend Quality Standards
 
 The following standards define acceptable work for all frontend code. Every item must be met before a commit or task completion.
